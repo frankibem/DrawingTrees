@@ -7,6 +7,17 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Canvas x:Name="surface">
+        </Canvas>
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center"
+                    VerticalAlignment="Center" Margin="0 0 0 20">
+            <TextBox x:Name="input" MaxLength="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="50" FontSize="20" KeyUp="input_KeyUp"></TextBox>
+            <Button Margin="10 0 0 0" Width="50" Click="Button_Click">Add</Button>
+            <Button x:Name="reset" Margin="10 0 0 0" Width="50" Click="reset_Click">Reset</Button>
+        </StackPanel>
     </Grid>
 </Window>
